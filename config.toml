@@ -1,0 +1,12 @@
+baseURL = "https://gotoguy.blog/"
+languageCode = "en-us"
+title = "GoToGuy Blog"
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[params]
+  description = "Thoughts, tutorials, and notes from GoToGuy."
+
+[outputs]
+  home = ["HTML", "RSS"]
