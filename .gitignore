@@ -4,3 +4,4 @@
 Thumbs.db
 /migration/*.xml
 /migration/*.wxr
+/resources/_gen/

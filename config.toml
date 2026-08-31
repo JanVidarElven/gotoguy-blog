@@ -1,12 +1,105 @@
 baseURL = "https://gotoguy.blog/"
-languageCode = "en-us"
+theme = "LoveIt"
 title = "GoToGuy Blog"
+defaultContentLanguage = "en"
+languageCode = "en-us"
+languageName = "English"
+hasCJKLanguage = false
+paginate = 10
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+[author]
+  name = "Jan Vidar Elven"
+  link = "https://gotoguy.blog/"
 
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+  [[menu.main]]
+    weight = 4
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+
 [params]
-  description = "Thoughts, tutorials, and notes from GoToGuy."
+  defaultTheme = "auto"
+  gitRepo = "https://github.com/JanVidarElven/gotoguy-blog"
+  dateFormat = "2006-01-02"
+  title = "GoToGuy Blog"
+  description = "Thoughts, tutorials, and notes on cloud, security, Azure, GitHub, and developer productivity."
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      name = "GoToGuy Blog"
+      typeit = false
+
+  [params.footer]
+    enable = true
+    hugo = true
+    copyright = true
+    author = true
+    since = 2026
+
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      title = "GoToGuy Blog"
+      subtitle = "Cloud, security, Azure, GitHub, and developer productivity."
+      typeit = false
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = "JanVidarElven"
+    RSS = true
+
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    linkToMarkdown = true
+    rssFullText = false
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

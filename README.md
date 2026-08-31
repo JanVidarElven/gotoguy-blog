@@ -3,6 +3,7 @@
 This repository is ready for a WordPress-to-Hugo migration with:
 
 - Hugo static site generation
+- LoveIt theme
 - Markdown-first content
 - Azure Static Web Apps hosting
 - GitHub Actions CI/CD on every push
@@ -10,6 +11,7 @@ This repository is ready for a WordPress-to-Hugo migration with:
 ## Current defaults
 
 - Production URL: `https://gotoguy.blog/`
+- Theme: `LoveIt`
 - Post permalink format: `/:year/:month/:day/:slug/`
 - Build command: `hugo --minify`
 - Build output: `public/`
@@ -17,9 +19,9 @@ This repository is ready for a WordPress-to-Hugo migration with:
 ## Repository layout
 
 - `config.toml`: Hugo site settings and permalinks
+- `themes/LoveIt/`: Git submodule for the active Hugo theme
 - `content/posts/`: Blog posts in Markdown
 - `content/about.md`: Static page example
-- `layouts/`: Minimal templates so the site runs before theme selection
 - `static/`: Static assets
 - `.github/workflows/deploy-swa.yml`: CI/CD pipeline for SWA
 - `staticwebapp.config.json`: SWA routing, headers, and legacy redirects
@@ -30,7 +32,8 @@ This repository is ready for a WordPress-to-Hugo migration with:
 2. Run:
 
    ```bash
-   hugo server -D
+   git submodule update --init --recursive
+   hugo server -D --disableFastRender
    ```
 
 3. Open `http://localhost:1313`.
