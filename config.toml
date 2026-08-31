@@ -38,6 +38,11 @@ enableEmoji = true
     identifier = "about"
     name = "About"
     url = "/about/"
+  [[menu.main]]
+    weight = 5
+    identifier = "speaking"
+    name = "Speaking"
+    url = "/speaking/"
 
 [params]
   defaultTheme = "auto"
@@ -64,8 +69,9 @@ enableEmoji = true
     rss = 10
     [params.home.profile]
       enable = true
-      title = "GoToGuy Blog"
-      subtitle = "Cloud, security, Azure, GitHub, and developer productivity."
+      avatarURL = "https://avatars.githubusercontent.com/u/13981640?v=4"
+      title = "Jan Vidar Elven"
+      subtitle = "Microsoft MVP Security, Cloud and Datacenter Architect"
       typeit = false
       social = true
     [params.home.posts]
@@ -74,7 +80,22 @@ enableEmoji = true
 
   [params.social]
     GitHub = "JanVidarElven"
+    Linkedin = "janvidarelven"
     RSS = true
+    [params.social.X]
+      weight = 3
+      url = "https://x.com/JanVidarElven"
+      title = "X"
+      newtab = true
+      [params.social.X.icon]
+        src = "https://cdn.jsdelivr.net/npm/simple-icons@14.16.0/icons/x.svg"
+    [params.social.Bluesky]
+      weight = 4
+      url = "https://bsky.app/profile/jan.vidar.elven.no"
+      title = "Bluesky"
+      newtab = true
+      [params.social.Bluesky.icon]
+        src = "https://cdn.jsdelivr.net/npm/simple-icons@14.16.0/icons/bluesky.svg"
 
   [params.page]
     hiddenFromHomePage = false

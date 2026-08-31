@@ -22,8 +22,11 @@ This repository is ready for a WordPress-to-Hugo migration with:
 - `themes/LoveIt/`: Git submodule for the active Hugo theme
 - `content/posts/`: Blog posts in Markdown
 - `content/about.md`: Static page example
+- `content/speaking.md`: Speaking page backed by Sessionize data
+- `data/sessionize/speaking_history.json`: Generated speaking session data
 - `static/`: Static assets
 - `.github/workflows/deploy-swa.yml`: CI/CD pipeline for SWA
+- `.github/workflows/refresh-speaking-history.yml`: Manual refresh of speaking history
 - `staticwebapp.config.json`: SWA routing, headers, and legacy redirects
 
 ## Local development
@@ -37,6 +40,16 @@ This repository is ready for a WordPress-to-Hugo migration with:
    ```
 
 3. Open `http://localhost:1313`.
+
+## Speaking history refresh
+
+Refresh the speaking page data locally:
+
+```bash
+python scripts/fetch_sessionize_speaking_history.py
+```
+
+Or run the **Refresh speaking history** workflow in GitHub Actions to update it from your public Sessionize profile.
 
 ## Azure Static Web Apps setup
 

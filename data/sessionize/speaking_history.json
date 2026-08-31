@@ -1,0 +1,194 @@
+{
+  "profile": {
+    "name": "Jan Vidar Elven",
+    "source_url": "https://sessionize.com/jan-vidar-elven/",
+    "fetched_at": "2026-08-31T07:25:19Z"
+  },
+  "sessions": [
+    {
+      "title": "Identity Master class",
+      "url": "https://sessionize.com/s/jan-vidar-elven/identity-master-class/145939",
+      "summary": ""
+    },
+    {
+      "title": "Automate IAM and IGA with Microsoft Entra ID Governance - While I enjoy my Guinness!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/automate-iam-and-iga-with-microsoft-entra-id-gover/136846",
+      "summary": "With the combination of Inbound Provisioning API and Lifecycle Workflows in Microsoft Entra ID, the possibility of automating onboarding new employees to your tenant, and make sure they have access to the right resources for their job role through the whole employee lifecycle from employent, via job role changes and leaving, have never been bigger. As an Identity admin, you have often found your self performing manual tasks, both inside and outside work hours. Join me in this deep dive where I will show you all my experience from the last 2 years using these solutions, and show great demos which you can use in your organization, on how you can automate these scenarios, while you can lean back and enjoy your deserved Guinness!"
+    },
+    {
+      "title": "License to Assist - Bringing AI Agents to Entra ID",
+      "url": "https://sessionize.com/s/jan-vidar-elven/license-to-assist-bringing-ai-agents-to-entra-id/136845",
+      "summary": "In this session I want to share some of the exciting work I have been doing on using AI Agents and bringing AI to assist with Entra ID IAM, Security and Governance scenarios. What can you do with Security Copilot and Entra Skills? How you can use Declarative Agents with Teams Toolkit and Copilot Studio to use Graph API and own API's to support your own scenarios and needs. And last we will look into recent developments like MCP (Model Context Protocol) and where Entra ID towards to the end of 2025 is with it's own AI Agents built into the Entra management portal. This session will have practical walkthrough and takeaways, come for the demos and leave with the inspiration and solutions!"
+    },
+    {
+      "title": "I AM Entra! How to successfully build your IAM solution using Microsoft Entra",
+      "url": "https://sessionize.com/s/jan-vidar-elven/i-am-entra-how-to-successfully-build-your-iam-solu/123150",
+      "summary": "Join me for a technical deep dive into building effective Identity and Access Management (IAM) solutions using Microsoft Entra. We look into key IAM scenarios, including Identity Governance & Lifecycle Workflows, Access Management, and Secure Application Access, while highlighting Entra’s capabilities such as Conditional Access, Identity Protection, and Entitlement Management. Participants will gain insights into implementing these technologies to enhance security while optimizing user experiences, and ensure compliance with regulatory standards and common security frameworks like Zero Trust."
+    },
+    {
+      "title": "Lekse lært - Hvordan FRID IKS løste AVD og Nerdio i et multi tenant - multi Azure scenario",
+      "url": "https://sessionize.com/s/jan-vidar-elven/lekse-laert-hvordan-frid-iks-loste-avd-og-nerdio-i/105486",
+      "summary": "FRID IKS (Fylkeskommunenes Ressurs for It og Digitalisering) er et interkommunalt selskap, som ble opprettet i forbindelse med oppløsningen av Viken fylkeskommune, og drifter nå både en felles management plattform samt Akershus, Buskerud, og Østfold fylkeskommuner. I denne sesjonen vil jeg sammen med arbeidsflate konsulenter fra FRID IKS fortelle om erfaringer fra hvordan vi løste implementering og forvaltning av Azure Virtual Desktop ved hjelp av Nerdio i et multiple tenant og multiple Azure subscription miljø."
+    },
+    {
+      "title": "Azure AD Authentication Fundamentals",
+      "url": "https://sessionize.com/s/jan-vidar-elven/azure-ad-authentication-fundamentals/103486",
+      "summary": "Modern authentication in Azure AD can be used in a variety of forms, from human identities to non-human identities like devices, and workload identities like applications and managed identities. While supporting industry standards for AuthN and AuthZ like OIDC and OAuth2, as an Azure AD admin, IT ops or Developer, you have to know what to use when. This session aim to give you that fundamental knowledge!"
+    },
+    {
+      "title": "Automate IAM and IGA with Microsoft Entra ID Governance - While I enjoy my Kölsch",
+      "url": "https://sessionize.com/s/jan-vidar-elven/automate-iam-and-iga-with-microsoft-entra-id-gover/103485",
+      "summary": "With the combination of Inbound Provisioning API and Lifecycle Workflows in Microsoft Entra ID, the possibility of automating onboarding new employees to your tenant, and make sure they have access to the right resources for their job role through the whole employee lifecycle from employent, via job role changes and leaving, have never been bigger. As an Identity admin, you have often found your self performing manual tasks, both inside and outside work hours. Join me in this deep dive where I will show you how you can automate these scenarios, while you can lean back and your your deserved Kölsch!"
+    },
+    {
+      "title": "Security Infrastrucure as Code for Entra ID and Graph API",
+      "url": "https://sessionize.com/s/jan-vidar-elven/security-infrastrucure-as-code-for-entra-id-and-gr/97986",
+      "summary": "This highly technical and demo-heavy session will look into the recently announced public preview (MS Build, May 2024) of the Graph resource support from Bicep, and compare usage scenarios to those already available via Terraform. We will look into how to combine traditional Azure resource deployments together with Entra ID and Graph API resources, moving even more deployment scenarios to declarative infrastructure-as-code, both for local deployment and for DevOps pipelines or actions."
+    },
+    {
+      "title": "Hi, I’m the Microsoft Entra Copilot for Security, how may I assist you today?",
+      "url": "https://sessionize.com/s/jan-vidar-elven/hi-im-the-microsoft-entra-copilot-for-security-how/97985",
+      "summary": "Using Microsoft Copilot for Security in Microsoft Entra can be of great assistance for Identity administrators, IT support, Security Analysts and more. Join this session for insights in the latest scenarios where Copilot for Security in Entra can be a valuable resource for anyone working with Microsoft Entra!"
+    },
+    {
+      "title": "Access Entra Protected Resources without Secrets Using Workload Identity Federation",
+      "url": "https://sessionize.com/s/jan-vidar-elven/access-entra-protected-resources-without-secrets-u/96809",
+      "summary": "Workload Identity Federation using Microsoft Entra Workload ID opens up for a lot of scenarios for Microsoft Entra protected resources without needing to manage secrets secrets for service principals, and will increase your security posture as there are no secrets that can be exposed or exfiltrated.In this deep-dive session I will focus on automating Infrastructure as Code deployments using Azure DevOps Pipelines and Github Actions, and how by using Workload Identity Federation this can be used so that you can connect to any Microsoft Entra protected resources without needing to manage secrets in your code."
+    },
+    {
+      "title": "Develop with Azure Infrastructure as Code using Bicep",
+      "url": "https://sessionize.com/s/jan-vidar-elven/develop-with-azure-infrastructure-as-code-using-bi/96808",
+      "summary": "Bicep is Microsofts native tool for declaring Infrastructure as Code and deploying Azure resources. In this session we will learn about how you can use Bicep both in your local development and using CI/CD pipelines in Azure DevOps or Github Actions to create deployment of your Azure resources, apps and services."
+    },
+    {
+      "title": "The Complete Guide to External Identities in Microsoft Entra",
+      "url": "https://sessionize.com/s/jan-vidar-elven/the-complete-guide-to-external-identities-in-micro/96807",
+      "summary": "Have you ever heard about the Workforce Tenant Entra ID, or maybe Azure AD B2C or Microsoft's new offering for CIAM, the Entra ID for Customers Tenant? External Identities has evolved and is the new Guest! Or is it something completely different? Organizations might be well known with the B2B and Guest concept, but now more than ever you need to know the difference (or similarities) between internal & external members, guests, social logins, and what options there are for collaboration and application access between multiple tenants. The answer is Microsoft Entra External ID, but what is really the question??"
+    },
+    {
+      "title": "User Lifecycle: Inbound Provisioning and Governance with Microsoft Entra ID Governance and Workflows",
+      "url": "https://sessionize.com/s/jan-vidar-elven/user-lifecycle-inbound-provisioning-and-governance/96806",
+      "summary": "It all begins and ends with an Identity! Before the users and their devices can be managed, they need to be onboarded and provisioned with their user account. This is where Microsoft Entra Provisioning API and Lifecycle Workflows in Entra ID Governance enters the scene. By automating scenarios for Joiner, Mover and Leaver we can set up templates and tasks that for example automatically sends out a Temporary Access Pass for new hires which they can use for first time setting up their account and device to be securely managed! We can even implement custom tasks and extensions via Azure Logic Apps, that can trigger other APIs or even something you've built in Azure Functions! Learn how to use these lifecycle templates and customize tasks with serverless solutions in this awesome deep dive workshop where automation black belt Jan Vidar will share his best tips and tricks for implementing a successful Identity Governance that supports a seamless and automated user on- and offboarding!"
+    },
+    {
+      "title": "Build your own Copilot using Azure Open AI and your data!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/build-your-own-copilot-using-azure-open-ai-and-you/88663",
+      "summary": "In this session I will show you how you can build your own Security Copilot Assistant in AI Studio, by using Azure Open AI, AI Search Service and your own data sources. We will learn how we can get data from Microsoft APIs like Graph API, and let users ask about security status and information in a natural language!"
+    },
+    {
+      "title": "Increasing my Identity Security with Microsoft Security Copilot",
+      "url": "https://sessionize.com/s/jan-vidar-elven/increasing-my-identity-security-with-microsoft-sec/71284",
+      "summary": "Microsoft Security Copilot will be of important value for security teams, analysts and defenders in Organizations, building on OpenAI and integrating with Microsoft’s end-to-end security portfolio. But how can I as a user increase my identity security posture using Security Copilot?In this session we will place us self as the end-user, and explore how and in which scenarios you as the end-user can access Security Copilot to understand and make your identity more secure!"
+    },
+    {
+      "title": "Connect to any Azure AD protected API using OAuth2 and Custom Connectors",
+      "url": "https://sessionize.com/s/jan-vidar-elven/connect-to-any-azure-ad-protected-api-using-oauth2/69851",
+      "summary": "While there are hundreds of built-in connectors you can use in your Power Automate Flows or Power Apps, there are many scenarios where you would want to access API's like Microsoft Graph, or any other API that is protected by Azure AD. In this session I will show how you can access this using Custom Connectors and OAuth2, and my demo will show a self-built API using Azure Serverless solutions like Azure Functions and Logic Apps."
+    },
+    {
+      "title": "Getting started with Azure Infrastructure as Code with Bicep and TerraForm",
+      "url": "https://sessionize.com/s/jan-vidar-elven/getting-started-with-azure-infrastructure-as-code-/69850",
+      "summary": "In this session you will get up to speed with the 2 most important and popular options for Infrastructure as Code in Azure: Microsoft's own Bicep and Hashicorp TerraForm. Expect practical demos and takeaways you can start using in your organization today!"
+    },
+    {
+      "title": "How to Secure Requests from one Serverless Solution to another using Managed Identities",
+      "url": "https://sessionize.com/s/jan-vidar-elven/how-to-secure-requests-from-one-serverless-solutio/69849",
+      "summary": "From time to time when you build serverless solutions using Function Apps or Logic Apps, you need to call one from the other. In this session I will show how this request can be done securely, using Managed Identities and Azure AD to authenticate between them. In the demo I will show this both using Azure Functions and Logic Apps, and between them."
+    },
+    {
+      "title": "Knee-Deep Dive into Identity Governance and Lifecycle Workflows with Microsoft Entra Azure AD",
+      "url": "https://sessionize.com/s/jan-vidar-elven/knee-deep-dive-into-identity-governance-and-lifecy/62037",
+      "summary": "It all begins and ends with an Identity! Before the users and their devices can be managed, they need to be onboarded with their user account. This is where Microsoft Entra and Lifecycle Workflows in Azure AD enters the scene. By automating scenarios for Joiner, Mover and Leaver we can set up templates and tasks that for example automatically sends out a Temporary Access Pass for new hires which they can use for first time setting up their account and device to be managed! We can even implement custom tasks and extensions via Azure Logic Apps, that can trigger other APIs or even something you've built in Azure Functions! Learn how to use these lifecycle templates and customize tasks with serverless solutions in this awesome deep dive where automation black belt Jan Vidar will share his best tips and tricks for implementing a successful Identity Governance that supports a seamless and automated user on- and offboarding!"
+    },
+    {
+      "title": "Securing Serverless APIs with Azure Active Directory and Azure Functions",
+      "url": "https://sessionize.com/s/jan-vidar-elven/securing-serverless-apis-with-azure-active-directo/62117",
+      "summary": "This session will demonstrate how to build secure, serverless APIs using Azure Active Directory (AAD) and Azure Functions. Attendees will learn how to use AAD to authenticate and authorize access to their APIs, and how to use Azure Functions to build and deploy their API logic. We will also show how to use Logic Apps to integrate with other systems and services. By the end of this session, attendees will have a solid understanding of how to build and secure serverless APIs using Azure's serverless offerings."
+    },
+    {
+      "title": "Securing Logic Apps with Azure AD and OAuth2",
+      "url": "https://sessionize.com/s/jan-vidar-elven/securing-logic-apps-with-azure-ad-and-oauth2/46936",
+      "summary": "Azure Logic Apps are increasingly beeing used for Serverless automation, orchestration, integration and reporting scenarios. Logic Apps can be triggered via HTTP requests, and you need to make sure that requests are secured, and in this session I will show you how you can protect Logic Apps using Azure AD and OAuth2 authorization policies."
+    },
+    {
+      "title": "Power Up Windows LAPS for Microsoft Entra Azure AD",
+      "url": "https://sessionize.com/s/jan-vidar-elven/power-up-windows-laps-for-microsoft-entra-azure-ad/69848",
+      "summary": "Challenge: Security don't let users be administrators on their devices. Solution: Windows LAPS provide an Azure AD backed up local admin password via Intune. Power Up: Create a Power App that provides a secure interface using Logic Apps API that retrieves the users managed devices local admin password via Graph API. Value: Users happy and you rock!"
+    },
+    {
+      "title": "Gamify Identity Security with Power Platform",
+      "url": "https://sessionize.com/s/jan-vidar-elven/gamify-identity-security-with-power-platform/69831",
+      "summary": "If you want to motivate the users in your organization to do something, it's always a good idea with gamification where users can compete and compare with each other. In this session I will show how you can increase your identity security and awareness by using Power Platform and connecting to Security APIs in Microsoft Graph in a creative way. Demos will be shared so that you can start implementing in your organization right away."
+    },
+    {
+      "title": "Connect Power Platform to Azure AD Protected APIs using built-in HTTP connectors",
+      "url": "https://sessionize.com/s/jan-vidar-elven/connect-power-platform-to-azure-ad-protected-apis-/66088",
+      "summary": "There are several ways you can access the Azure AD Protected APIs in Power Platform Flows and Apps. Without creating Custom Connectors, which basically can connect to any REST based API that is available, it is useful to know what built-in HTTP connectors are available and can be used for delegated authentication to Azure AD Protected APIs like Microsoft Graph or other APIs. This session will provide you with all the answers you need to know to start exploring Azure AD Protected APIs using the built-in connectors that are ready for use for you today!"
+    },
+    {
+      "title": "External Identities - Self-Service Sign Up, Governance and Workflow Automations",
+      "url": "https://sessionize.com/s/jan-vidar-elven/external-identities-self-service-sign-up-governanc/64304",
+      "summary": "In this session we will look beyond the traditional Guest invitation process, and dive into how you can create Self-Service Sign Up user flows, and use Microsoft Entra External Identities and Azure AD Governance for Lifecycle management of External Identitites and Access scenarios. Expect technical deep dive demos!"
+    },
+    {
+      "title": "Passwordless Azure Authentication using Managed Identities",
+      "url": "https://sessionize.com/s/jan-vidar-elven/passwordless-azure-authentication-using-managed-id/61960",
+      "summary": "Passwordless for Microsoft Identities is now the thing to do to secure your end users, but what about Azure Services that need to authenticate to other resources and APIs? This is where Managed Identities is the way to go. In this session I will show the capabilities and usage scenarios for using Managed Identities to get rid of application credentials once and for all!"
+    },
+    {
+      "title": "How to Create an Azure AD Protected API in Azure in one hour!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/how-to-create-an-azure-ad-protected-api-in-azure-i/61959",
+      "summary": "Come and join this interactive session where I in just one hour will show you how you can create your own API in Azure and protect it with Azure AD using Oauth2. API's can be anything you want, and in true NIC spirit this session will really will be most about the demos and very little slides! This session is as much suited for IT pros as Devs. Hope to see you there!"
+    },
+    {
+      "title": "Automate adding External Users for Power App using Graph in Power Automate",
+      "url": "https://sessionize.com/s/jan-vidar-elven/automate-adding-external-users-for-power-app-using/29786",
+      "summary": "Finally Power Apps are now available for external users outside your organization! In this session we will show you how to automate the invitation process using Azure AD B2B and Microsoft Graph API in Power Automate. Key takeaway from this session is how you can empower your citizen developers and delegate invitations from inside their own workspaces. The session will be mostly demos and show a real life practical example of using this for a customer support portal."
+    },
+    {
+      "title": "Learn to Automate Identity Management like a Pro with Graph PowerShell!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/learn-to-automate-identity-management-like-a-pro-w/29800",
+      "summary": "If you work with Identity & Access Management in Entra ID (previously known as Azure AD), chances are you will regularly come up with scenarios where you'd say: \"Hey, I should automate this!\" In this session Jan Vidar Elven will show you all his Pro tips on how to learn to automate with Entra ID, using Graph PowerShell SDK, because as we all (might) know, the Azure AD Windows PowerShell Module is going away soon! We will also look into how we can implement those automations with Serverless platforms like Azure Automation and Azure Functions, even DevOps Pipelines and Github Actions! Fasten your seatbelt, this will be a highly technical session with real life demo examples!"
+    },
+    {
+      "title": "Power'ing up your Home Office Lights using Power Platform",
+      "url": "https://sessionize.com/s/jan-vidar-elven/powering-up-your-home-office-lights-using-power-pl/38493",
+      "summary": "Microsoft Power Platform can be used in a variety of creative ways to both learn and create awesome automation solutions, and you can even use this platform for your home automation. In this session I will show you how you can control your Home Office Lights (in my case Phillips Hue) via API and Power Platform components like PowerApps, Power Automate, Logic Apps and more."
+    },
+    {
+      "title": "Protecting Azure Serverless solutions with Azure AD",
+      "url": "https://sessionize.com/s/jan-vidar-elven/protecting-azure-serverless-solutions-with-azure-a/38492",
+      "summary": "Serverless Automation solutions like Logic Apps and Azure Functions can be valuable tools for automating IT processes, much like Power Automate Flows automate user processes. While Flows run under the context of the calling user, Logic Apps and Azure Functions runs as itself. In this session we will look into how to add Azure AD Authentication and Authorization to these solutions, and how we can let end users call them securely and protected by Azure AD."
+    },
+    {
+      "title": "Manage Identity Lifecycle and Access Control with Azure AD Identity Governance",
+      "url": "https://sessionize.com/s/jan-vidar-elven/manage-identity-lifecycle-and-access-control-with-/26221",
+      "summary": "Being an Azure AD Administrator, a big part of your job is to manage identity lifecycle and make sure users have the right access at every time. With the new Azure AD Identity Governance we finally have a solution to manage both the lifecycle for your own users and for partner guests, lifecycle for resource access, and securely provide administrator access. In this session we will deep dive into the Identity Governance solution consisting of Entitlement Management, Access Reviews, Privileged Identity Management and Terms of Use. The session will be practical and demo heavy, showing value and usage scenarios every Azure AD admin would want to know about!"
+    },
+    {
+      "title": "Microsoft Graph 101",
+      "url": "https://sessionize.com/s/jan-vidar-elven/microsoft-graph-101/18304",
+      "summary": "If you are curious about Microsoft Graph, this will get you started. Learn about the basics for querying the Microsoft Graph API, and how to use the Graph Explorer."
+    },
+    {
+      "title": "Microsoft Graph 101 - The Best Way to Get Started and Learn Graph is Using the Graph Explorer!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/microsoft-graph-101-the-best-way-to-get-started-an/25909",
+      "summary": "If you are curious and want to learn more about Microsoft Graph, this will get you started using the awesome Graph Explorer. In this session you will see how the best way to learn about what the Microsoft Graph can do for you is using the Graph Explorer, and the basics for querying the Microsoft Graph API. After this session you will definitely walk away wanting to try more yourself!"
+    },
+    {
+      "title": "Same old System Center.. but how can we hook up the Cloud and make it hot again!",
+      "url": "https://sessionize.com/s/jan-vidar-elven/same-old-system-center.-but-how-can-we-hook-up-the/25914",
+      "summary": "System Center 2019 was released earlier this year, and for many of the solutions it was a bit \"same old, same old..\". But there are many possibilities where integrating with the Azure Cloud Platform can make System Center hot again!Speakers Sam and Jan Vidar have been working with System Center since the early days, before even the Cloud became a thing. Let us show you how the Cloud can add value to your existing System Center investments!"
+    },
+    {
+      "title": "Microsoft Graph 201",
+      "url": "https://sessionize.com/s/jan-vidar-elven/microsoft-graph-201/19536",
+      "summary": "If you know a few things about Microsoft Graph, and wonder what to do next and how you can use it, this session will give you some great ideas on how to start using the Microsoft Graph in your own solutions."
+    },
+    {
+      "title": "Monitoring and Reporting on Activities and Security in Microsoft Entra Azure AD",
+      "url": "https://sessionize.com/s/jan-vidar-elven/monitoring-and-reporting-on-activities-and-securit/67197",
+      "summary": "There is a lot going on in your Azure Active Directory tenant, from user sign-ins to audit of changes, and you would want to make sure that you can get insights of how your apps and services are being used, potential risks, help with troubleshooting and any changes to your tenants configuration and both internal and external users. In this session we will look into how you can integrate Azure AD activity logs with Azure Monitor, and how you can view and create alerts and workbooks that provide valuable insights. We will also look into reports and the APIs you can use to get both monitoring and reporting data to any custom integration you will find useful. This session will be about demos and practical real life examples and scenarios you can bring home to your own environment!"
+    }
+  ]
+}

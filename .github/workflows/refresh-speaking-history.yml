@@ -1,0 +1,31 @@
+name: Refresh speaking history
+
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh Sessionize data
+        run: python scripts/fetch_sessionize_speaking_history.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/refresh-speaking-history
+          commit-message: "chore: refresh Sessionize speaking history"
+          title: "chore: refresh Sessionize speaking history"
+          body: |
+            Refreshes the Hugo speaking page backing data from the public Sessionize speaker profile.

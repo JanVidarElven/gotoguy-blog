@@ -1,0 +1,33 @@
+{{- $data := site.Data.sessionize.speaking_history -}}
+{{- if not $data -}}
+  <p>Speaking history is currently unavailable.</p>
+{{- else -}}
+  {{- with $data.profile -}}
+    <p>
+      Source:
+      <a href="{{ .source_url }}" rel="noopener noreferrer" target="_blank">Sessionize speaker profile</a><br>
+      Last refreshed: {{ .fetched_at }}
+    </p>
+  {{- end -}}
+
+  {{- if gt (len $data.sessions) 0 -}}
+    <div class="details">
+      <h2>Published sessions</h2>
+      <ul>
+        {{- range $data.sessions -}}
+          <li>
+            <p>
+              <strong><a href="{{ .url }}" rel="noopener noreferrer" target="_blank">{{ .title }}</a></strong>
+            </p>
+            {{- with .summary -}}
+              <p>{{ . }}</p>
+            {{- end -}}
+          </li>
+        {{- end -}}
+      </ul>
+    </div>
+  {{- else -}}
+    <p>No speaking history has been imported yet.</p>
+  {{- end -}}
+{{- end -}}
+
