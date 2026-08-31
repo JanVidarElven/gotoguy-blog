@@ -51,6 +51,40 @@ python scripts/fetch_sessionize_speaking_history.py
 
 Or run the **Refresh speaking history** workflow in GitHub Actions to update it from your public Sessionize profile.
 
+## Squad setup for blog operations
+
+This repository is initialized for [Squad](https://github.com/bradygaster/squad) and includes a specialized team under [.squad/](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.squad):
+
+- `lead`: product and technical coordination
+- `frontend`: LoveIt theme, UX, and accessibility
+- `platform`: Azure Static Web Apps, GitHub Actions, and backend-facing Azure work
+- `migration`: WordPress conversion, redirects, media, and SEO continuity
+- `security`: secrets, permissions, and hardening
+- `reviewer`: validation and regression review
+- `docs`: runbooks and contributor guidance
+
+### Start using Squad locally
+
+```bash
+npx @bradygaster/squad-cli doctor
+copilot --agent squad --additional-mcp-config @.mcp.json --yolo
+```
+
+Or in VS Code Copilot Chat, select the **Squad** agent directly. The repo includes [settings.json](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.vscode/settings.json) to make new chat sessions default to Squad mode.
+
+Then describe the work naturally, for example:
+
+- `Team, plan the remaining WordPress migration tasks.`
+- `frontend, improve the homepage and taxonomy navigation.`
+- `platform, validate Azure Static Web Apps deployment and custom domain setup.`
+- `migration, review converted posts and generate redirects for old WordPress URLs.`
+
+### GitHub issue flow
+
+- Add the `squad` label to an issue to send it to triage.
+- The Squad triage workflow applies a `squad:{member}` label based on the issue content.
+- Pushes to [.squad/team.md](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.squad/team.md) sync labels automatically.
+
 ## Azure Static Web Apps setup
 
 1. Create a Static Web App in your Azure subscription.
