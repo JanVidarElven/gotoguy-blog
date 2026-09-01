@@ -1,0 +1,104 @@
+{{- $analytics := .Scratch.Get "analytics" | default dict -}}
+{{- if and $analytics.enable $analytics.google.id -}}
+    {{- $measurementID := $analytics.google.id -}}
+    <style>
+        .analytics-consent {
+            align-items: center;
+            background: #fff;
+            border-top: 1px solid #ddd;
+            bottom: 0;
+            box-shadow: 0 -2px 12px rgb(0 0 0 / 12%);
+            color: #1f2328;
+            display: none;
+            gap: 1rem;
+            justify-content: center;
+            left: 0;
+            padding: 1rem;
+            position: fixed;
+            right: 0;
+            z-index: 10000;
+        }
+        .analytics-consent p {
+            margin: 0;
+            max-width: 52rem;
+        }
+        .analytics-consent__actions {
+            display: flex;
+            gap: .5rem;
+        }
+        .analytics-consent button {
+            border: 1px solid #666;
+            border-radius: .25rem;
+            cursor: pointer;
+            padding: .5rem .85rem;
+        }
+        .analytics-consent__accept {
+            background: #0067b8;
+            border-color: #0067b8 !important;
+            color: #fff;
+        }
+        [theme="dark"] .analytics-consent {
+            background: #252627;
+            border-color: #555;
+            color: #f8f8f8;
+        }
+        @media (max-width: 680px) {
+            .analytics-consent {
+                align-items: stretch;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <div class="analytics-consent" id="analytics-consent" role="dialog" aria-live="polite" aria-label="Analytics consent">
+        <p>
+            This site uses Google Analytics only when you allow it, to understand traffic and improve the blog.
+            <a href="/privacy/">Read the privacy notice</a>.
+        </p>
+        <div class="analytics-consent__actions">
+            <button type="button" id="analytics-reject">Reject</button>
+            <button type="button" class="analytics-consent__accept" id="analytics-accept">Allow analytics</button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var consentKey = "gotoguy-analytics-consent";
+            var consent = window.localStorage && localStorage.getItem(consentKey);
+            var banner = document.getElementById("analytics-consent");
+
+            function loadGoogleAnalytics() {
+                if (window.gtag) {
+                    return;
+                }
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { window.dataLayer.push(arguments); };
+                window.gtag("js", new Date());
+                window.gtag("config", "{{ $measurementID }}"{{ if $analytics.google.anonymizeIP }}, { "anonymize_ip": true }{{ end }});
+                var script = document.createElement("script");
+                script.async = true;
+                script.src = "https://www.googletagmanager.com/gtag/js?id={{ $measurementID }}";
+                document.head.appendChild(script);
+            }
+
+            function saveConsent(value) {
+                if (window.localStorage) {
+                    localStorage.setItem(consentKey, value);
+                }
+                banner.style.display = "none";
+            }
+
+            if (consent === "granted") {
+                loadGoogleAnalytics();
+            } else if (consent !== "denied") {
+                banner.style.display = "flex";
+            }
+
+            document.getElementById("analytics-accept").addEventListener("click", function () {
+                saveConsent("granted");
+                loadGoogleAnalytics();
+            });
+            document.getElementById("analytics-reject").addEventListener("click", function () {
+                saveConsent("denied");
+            });
+        }());
+    </script>
+{{- end -}}

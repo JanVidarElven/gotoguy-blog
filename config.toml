@@ -44,6 +44,11 @@ timeout = "300s"
     identifier = "speaking"
     name = "Speaking"
     url = "/speaking/"
+  [[menu.main]]
+    weight = 6
+    identifier = "privacy"
+    name = "Privacy"
+    url = "/privacy/"
 
 [params]
   defaultTheme = "auto"
@@ -97,6 +102,12 @@ timeout = "300s"
       newtab = true
       [params.social.Bluesky.icon]
         src = "https://cdn.jsdelivr.net/npm/simple-icons@14.16.0/icons/bluesky.svg"
+
+  [params.analytics]
+    enable = true
+    [params.analytics.google]
+      id = ""
+      anonymizeIP = true
 
   [params.page]
     hiddenFromHomePage = false

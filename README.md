@@ -90,12 +90,50 @@ Then describe the work naturally, for example:
 
 ## Analytics rollout checklist
 
+### Create the GA4 property
+
+1. In Google Analytics, open **Admin** and create a property for GoToGuy Blog.
+2. Set the reporting timezone and currency.
+3. Under **Data collection and modification**, open **Data streams** and add a Web stream for `https://gotoguy.blog/`.
+4. Enable enhanced measurement for page views, scrolls, outbound clicks, and file downloads.
+5. Copy the Measurement ID (`G-...`).
+6. In the GitHub repository, open **Settings > Secrets and variables > Actions > Variables** and create:
+   - Name: `GA4_MEASUREMENT_ID`
+   - Value: the `G-...` Measurement ID
+
+The Measurement ID is injected only for pushes to `main`. Pull-request previews and normal local development do not load GA4.
+
+GA4 is also consent-gated: it is not downloaded and does not collect data until the visitor selects **Allow analytics**. The behavior and stored consent value are described on the `/privacy/` page.
+
+### Configure Google Search Console
+
+1. Add a Domain property for `gotoguy.blog` in Google Search Console.
+2. Add the provided DNS TXT verification record at the domain apex and retain it after verification.
+3. Submit `https://gotoguy.blog/sitemap.xml`.
+4. Inspect representative homepage, post, category, and tag URLs.
+5. Monitor indexing, canonical selection, Core Web Vitals, clicks, impressions, CTR, and average position.
+
+No Search Console Change of Address request is needed because the domain remains the same.
+
+### Validate analytics
+
+For a deliberate local production-mode test, use a test Measurement ID:
+
+```powershell
+$env:HUGO_PARAMS_ANALYTICS_GOOGLE_ID = "G-XXXXXXXXXX"
+hugo server --environment production
+```
+
+Before consent, confirm no request is made to `googletagmanager.com`. After allowing analytics, validate the tag using Google Tag Assistant and GA4 Realtime or DebugView.
+
+### Migration baseline
+
 Use this sequence during and after cutover:
 
-1. Configure GA4 property + data stream and verify pageview/event capture.
-2. Verify Google Search Console property and submit `/sitemap.xml`.
-3. Decide optional privacy-friendly analytics (Plausible/Umami) and wire it once.
-4. Capture migration baseline KPIs (traffic, CTR, top landing pages, 404s/redirects) for the first 30 days.
+1. Capture users, sessions, views, engagement rate, and average engagement time.
+2. Compare top landing pages before and after cutover.
+3. Monitor organic clicks, impressions, CTR, and average position.
+4. Monitor 404s and redirect behavior during the first 30 days.
 
 ## Azure Static Web Apps setup
 
