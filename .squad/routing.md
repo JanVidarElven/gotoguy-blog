@@ -9,6 +9,7 @@ How to decide who handles what.
 | Architecture, scope, backlog shaping | Lead | epics, trade-offs, sequencing, acceptance criteria |
 | LoveIt theme, layouts, UX, accessibility | Frontend | menus, homepage, styling, taxonomy pages, responsive fixes |
 | Azure hosting, GitHub Actions, deployment plumbing | Platform | SWA config, workflows, custom domains, Azure resources |
+| Analytics instrumentation and reporting | Analytics | GA4 events, Search Console coverage, privacy analytics, dashboards |
 | One-time WordPress migration and SEO preservation | Migration | WXR conversion, uploads, redirects, permalink mapping |
 | Security posture and secrets hygiene | Security | repo hardening, Action secrets, headers, threat review |
 | Regression, quality, release readiness | Reviewer | build validation, broken links, redirect checks, content QA |
@@ -50,6 +51,9 @@ How to decide who handles what.
 | azure-platform | platform | security |
 | deployment | platform | reviewer |
 | github-actions | platform | security |
+| analytics | analytics | docs |
+| telemetry | analytics | platform |
+| traffic-insights | analytics | docs |
 | migration | migration | docs |
 | redirects | migration | reviewer |
 | seo | migration | frontend |

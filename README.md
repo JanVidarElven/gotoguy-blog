@@ -58,6 +58,7 @@ This repository is initialized for [Squad](https://github.com/bradygaster/squad)
 - `lead`: product and technical coordination
 - `frontend`: LoveIt theme, UX, and accessibility
 - `platform`: Azure Static Web Apps, GitHub Actions, and backend-facing Azure work
+- `analytics`: traffic analytics, telemetry instrumentation, and reporting insights
 - `migration`: WordPress conversion, redirects, media, and SEO continuity
 - `security`: secrets, permissions, and hardening
 - `reviewer`: validation and regression review
@@ -77,6 +78,7 @@ Then describe the work naturally, for example:
 - `Team, plan the remaining WordPress migration tasks.`
 - `frontend, improve the homepage and taxonomy navigation.`
 - `platform, validate Azure Static Web Apps deployment and custom domain setup.`
+- `analytics, set up GA4 and Search Console migration baseline tracking.`
 - `migration, review converted posts and generate redirects for old WordPress URLs.`
 
 ### GitHub issue flow
@@ -84,6 +86,16 @@ Then describe the work naturally, for example:
 - Add the `squad` label to an issue to send it to triage.
 - The Squad triage workflow applies a `squad:{member}` label based on the issue content.
 - Pushes to [.squad/team.md](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.squad/team.md) sync labels automatically.
+- Use [.github/ISSUE_TEMPLATE/analytics-instrumentation-and-reporting.md](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.github/ISSUE_TEMPLATE/analytics-instrumentation-and-reporting.md) to open structured analytics backlog items for `squad:analytics`.
+
+## Analytics rollout checklist
+
+Use this sequence during and after cutover:
+
+1. Configure GA4 property + data stream and verify pageview/event capture.
+2. Verify Google Search Console property and submit `/sitemap.xml`.
+3. Decide optional privacy-friendly analytics (Plausible/Umami) and wire it once.
+4. Capture migration baseline KPIs (traffic, CTR, top landing pages, 404s/redirects) for the first 30 days.
 
 ## Azure Static Web Apps setup
 
@@ -92,6 +104,31 @@ Then describe the work naturally, for example:
 3. Add repository secret:
    - `AZURE_STATIC_WEB_APPS_API_TOKEN` (from SWA Deployment Token)
 4. Push to `main` to trigger deployment.
+
+### Deploy the Static Web App with Bicep
+
+Infrastructure-as-code files are under [infra/azure-swa/](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/infra/azure-swa).
+
+1. Update [main.bicepparam](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/infra/azure-swa/main.bicepparam) with your preferred name/location/tags.
+2. Deploy to your target resource group:
+
+```bash
+az deployment group create \
+  --resource-group <your-resource-group> \
+  --parameters infra/azure-swa/main.bicepparam
+```
+
+3. Retrieve deployment token and add it as GitHub repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN`:
+
+```bash
+az staticwebapp secrets list \
+  --name <your-static-web-app-name> \
+  --resource-group <your-resource-group> \
+  --query "properties.apiKey" \
+  --output tsv
+```
+
+4. Keep this repo's existing workflow [deploy-swa.yml](C:/_Repos/GitHub-JanVidarElven/gotoguy-blog/.github/workflows/deploy-swa.yml) unchanged: it already deploys the Hugo `public/` folder using that token.
 
 ## WordPress migration checklist
 
@@ -117,12 +154,25 @@ python scripts/wp_export_to_hugo.py \
   --overwrite
 ```
 
+If your media export is a zip archive with year/month folders such as `2024/04/image.png`, extract it directly into `static/uploads/`:
+
+```bash
+python scripts/wp_export_to_hugo.py \
+  --xml migration/wordpress-export.xml \
+  --output content \
+  --include-pages \
+  --media-zip migration/media-export.zip \
+  --media-output static/uploads \
+  --overwrite
+```
+
 Notes:
 
 - Posts are written under `content/posts/`.
 - Pages are written under `content/`.
 - `wp-content/uploads` URLs are rewritten to `/uploads/`.
-- After conversion, copy media files to `static/uploads/`.
+- WordPress heading tags, lists, and inline code are converted into Hugo markdown where possible.
+- Media archives are extracted while preserving year/month folder structure.
 
 ### GitHub Actions workflow
 

@@ -151,6 +151,12 @@ jobs:
               'static web apps', 'swa', 'dns', 'custom domain', 'certificate',
               'backend', 'api', 'server', 'endpoint', 'infrastructure'
             ];
+            const analyticsKeywords = [
+              'analytics', 'telemetry', 'tracking', 'traffic', 'pageview',
+              'pageviews', 'events', 'event tracking', 'ga4', 'google analytics',
+              'search console', 'jetpack', 'dashboard', 'kpi', 'engagement',
+              'referrer', 'conversion', 'utm'
+            ];
             const migrationKeywords = [
               'migration', 'migrate', 'wordpress', 'wxr', 'content import',
               'import', 'posts', 'pages', 'uploads', 'media', 'redirect',
@@ -195,6 +201,12 @@ jobs:
                     includesAny(issueText, platformKeywords)) {
                   assignedMember = member;
                   triageReason = 'Issue relates to Azure platform or deployment work';
+                  break;
+                }
+                if (role.includes('analytics') &&
+                    includesAny(issueText, analyticsKeywords)) {
+                  assignedMember = member;
+                  triageReason = 'Issue relates to analytics instrumentation or traffic insights';
                   break;
                 }
                 if ((role.includes('test') || role.includes('qa') || role.includes('quality')) &&

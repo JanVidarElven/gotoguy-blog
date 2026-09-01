@@ -20,6 +20,21 @@
       "route": "/feed",
       "redirect": "/index.xml",
       "statusCode": 301
+    },
+    {
+      "route": "/feed/",
+      "redirect": "/index.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/speaker",
+      "redirect": "/speaking",
+      "statusCode": 301
+    },
+    {
+      "route": "/speaker/",
+      "redirect": "/speaking/",
+      "statusCode": 301
     }
   ]
 }

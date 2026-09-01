@@ -9,6 +9,7 @@ paginate = 10
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
+timeout = "300s"
 
 [author]
   name = "Jan Vidar Elven"
@@ -102,6 +103,32 @@ enableEmoji = true
     hiddenFromSearch = false
     linkToMarkdown = true
     rssFullText = false
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = true
+      Whatsapp = false
+      Viber = false
+      Pinterest = false
+      Tumblr = false
+      Hackernews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = false
+      Instapaper = false
+      Pocket = false
+      Flipboard = false
+      Weibo = false
+      Blogger = false
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = false
+      Skype = false
+      Trello = false
+      Mix = false
 
 [markup]
   [markup.highlight]

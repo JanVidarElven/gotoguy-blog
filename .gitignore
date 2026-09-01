@@ -4,6 +4,9 @@
 Thumbs.db
 /migration/*.xml
 /migration/*.wxr
+/migration/*.tar
+/migration/*.tar.gz
+/migration/*.zip
 /resources/_gen/
 # Squad: ignore runtime state (logs, inbox, sessions)
 # Note: .squad/casting/* is identity and MUST be committed to main, not ignored
