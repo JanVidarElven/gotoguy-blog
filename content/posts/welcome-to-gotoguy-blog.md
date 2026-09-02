@@ -43,6 +43,8 @@ The main technologies are:
 - **GitHub Actions** for continuous integration and deployment
 - **Azure Static Web Apps** for hosting, TLS, preview environments, and the custom domain
 - **Bicep** for deploying the Azure infrastructure as code
+- **Umami** for privacy-friendly, always-on traffic analytics
+- **Google Analytics** as an optional, consent-based analytics source for readers who opt in
 
 Every push to the main branch starts a GitHub Actions workflow. The workflow installs Hugo, builds and minifies the site, and then deploys the generated output to Azure Static Web Apps. Pull requests can also receive their own preview environments, making it possible to review changes before they reach the production site.
 
@@ -61,6 +63,15 @@ The process included more than simply copying text:
 - Redirects, feeds, metadata, and SEO continuity were reviewed for the platform cutover
 
 The result is that the existing archive remains available, but the source is now open, readable Markdown rather than content locked inside a WordPress database.
+
+## Analytics without the privacy trade-off
+
+WordPress previously relied on Jetpack Stats for traffic reporting. The new platform takes a more deliberate, privacy-first approach:
+
+- **Umami** runs unconditionally on every page view. It is cookieless, collects no personally identifiable information, and does not require asking readers for consent, so it gives a complete picture of traffic without a consent banner getting in the way.
+- **Google Analytics** is available as an optional, deeper-reporting layer, but it only loads after a reader explicitly allows analytics through a consent prompt.
+
+Details of both tools, and exactly what data each one does and does not collect, are documented on the [Privacy page](/privacy/).
 
 ## Working with an AI Squad
 
@@ -100,6 +111,9 @@ The assistant helped throughout the project by:
 - Diagnosing an Azure preflight validation error and validating the corrected deployment
 - Helping manage Git history when a large media archive prevented a push
 - Running Hugo builds and other validation checks after changes
+- Setting up a consent-gated Google Analytics integration for privacy-conscious GA4 reporting
+- Planning and executing the custom domain cutover from WordPress to Azure Static Web Apps, including diagnosing DNS and Azure SWA configuration issues along the way
+- Adding Umami as a cookieless, always-on analytics source, and evaluating whether historical Jetpack Stats could be exported into the new platform
 
 This conversational approach was especially useful when the migration uncovered unexpected problems. I could provide an error message or point to a page that did not render correctly, and the assistant could inspect the repository, identify the likely cause, implement a focused fix, and verify the result. That made the process iterative and practical rather than a one-time generated migration.
 
