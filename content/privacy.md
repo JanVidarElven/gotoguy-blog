@@ -4,11 +4,14 @@ date: 2026-09-01T23:12:00+02:00
 draft: false
 ---
 
-GoToGuy Blog uses Google Analytics only after you explicitly allow analytics in the consent prompt.
+GoToGuy Blog uses two analytics tools, with different privacy models:
 
-When enabled, analytics helps measure page views, engagement, referral sources, outbound clicks, and downloads so the blog can be improved. Google Analytics is not loaded when you reject analytics or before you make a choice.
+- **Umami** (privacy-friendly, always on) &mdash; measures page views, referrers, and countries without cookies and without collecting any personally identifiable information. Because it does not track individuals across sites, it runs without asking for consent.
+- **Google Analytics** (optional, consent-based) &mdash; only loads after you explicitly allow analytics in the consent prompt. It provides deeper engagement and referral reporting for readers who choose to opt in.
 
-Your choice is stored in your browser's local storage under `gotoguy-analytics-consent`. Use the button below to remove the saved choice and show the consent prompt again.
+When enabled, analytics helps measure page views, engagement, referral sources, outbound clicks, and downloads so the blog can be improved. Google Analytics is not loaded when you reject analytics or before you make a choice; Umami is unaffected by this choice since it does not require consent.
+
+Your Google Analytics choice is stored in your browser's local storage under `gotoguy-analytics-consent`. Use the button below to remove the saved choice and show the consent prompt again.
 
 <button type="button" id="reset-analytics-consent">Change analytics consent</button>
 
@@ -19,6 +22,6 @@ document.getElementById("reset-analytics-consent").addEventListener("click", fun
 });
 </script>
 
-The blog does not send its Azure deployment token or other repository secrets to analytics services. The Google Analytics Measurement ID is a public site identifier.
+The blog does not send its Azure deployment token or other repository secrets to analytics services. The Google Analytics Measurement ID and Umami Website ID are public site identifiers, not secrets.
 
-For details about how Google processes analytics data, see [Google's privacy information](https://policies.google.com/privacy).
+For details about how each service processes data, see [Google's privacy information](https://policies.google.com/privacy) and [Umami's privacy policy](https://umami.is/privacy).

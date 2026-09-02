@@ -108,6 +108,10 @@ timeout = "300s"
     [params.analytics.google]
       id = ""
       anonymizeIP = true
+    [params.analytics.umami]
+      enable = true
+      websiteID = ""
+      scriptURL = "https://cloud.umami.is/script.js"
 
   [params.page]
     hiddenFromHomePage = false

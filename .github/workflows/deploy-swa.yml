@@ -28,6 +28,7 @@ jobs:
       - name: Build
         env:
           HUGO_PARAMS_ANALYTICS_GOOGLE_ID: ${{ github.event_name == 'push' && vars.GA4_MEASUREMENT_ID || '' }}
+          HUGO_PARAMS_ANALYTICS_UMAMI_WEBSITEID: ${{ github.event_name == 'push' && vars.UMAMI_WEBSITE_ID || '' }}
         run: hugo --minify
 
       - name: Deploy to Azure Static Web Apps

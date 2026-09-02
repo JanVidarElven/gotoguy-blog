@@ -90,7 +90,28 @@ Then describe the work naturally, for example:
 
 ## Analytics rollout checklist
 
-### Create the GA4 property
+### Set up Umami Cloud (primary, always-on analytics)
+
+Umami is cookieless and does not process personal data, so it loads unconditionally with no consent prompt, giving full-traffic coverage that a consent-gated tool cannot.
+
+1. Sign up at [cloud.umami.is](https://cloud.umami.is) (free tier: 100k events/month).
+2. Add a website: name `GoToGuy Blog`, domain `gotoguy.blog`.
+3. Open the website's tracking code/settings and copy the **Website ID** (a UUID).
+4. In the GitHub repository, open **Settings > Secrets and variables > Actions > Variables** and create:
+   - Name: `UMAMI_WEBSITE_ID`
+   - Value: the Umami Website ID
+5. The Website ID is injected only for pushes to `main`, same as the GA4 Measurement ID.
+
+To validate locally:
+
+```powershell
+$env:HUGO_PARAMS_ANALYTICS_UMAMI_WEBSITEID = "00000000-0000-0000-0000-000000000000"
+hugo server --environment production
+```
+
+Confirm the `<script data-website-id="...">` tag from `cloud.umami.is/script.js` is present in the rendered page `<head>`, and that a pageview shows up in the Umami dashboard's Realtime view.
+
+### Create the GA4 property (optional, consent-gated)
 
 1. In Google Analytics, open **Admin** and create a property for GoToGuy Blog.
 2. Set the reporting timezone and currency.
