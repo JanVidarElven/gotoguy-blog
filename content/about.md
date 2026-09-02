@@ -5,7 +5,7 @@ draft: false
 slug: "about"
 ---
 
-My name is Jan Vidar Elven. I'm a Microsoft MVP (Most Valuable Professional) in Security focusing on Identity & Access since 2016. I work as a Senior Cloud & Platform Architect at Evidi AS ([www.evidi.com](https://www.evidi.com)) in Norway.
+My name is Jan Vidar Elven. I'm a Microsoft MVP (Most Valuable Professional) in Security since 2016,  focusing on Identity & Access and Security in Microsoft Cloud and Microsoft Entra. I work as a Senior Cloud & Platform Architect at Evidi AS ([www.evidi.com](https://www.evidi.com)) in Norway.
 
 I have been working in the IT industry for 30 years now, teaching, consulting and advising mainly in Microsoft Solutions and Technologies, Cloud Services and holding certifications such as MCT and MCSE, and a lot of Microsoft Certified Solutions Architect, Professional and Administrator certification areas.
 
