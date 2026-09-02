@@ -5,6 +5,8 @@ draft: false
 slug: "about"
 ---
 
-My name is Jan Vidar Elven. I'm a Microsoft MVP Enterprise Mobility and Cloud & Datacenter Architect working for Skill AS ([www.skill.no](http://www.skill.no)) in Norway. I'm also a Partner Technology Solution Professional (P-TSP) for Cloud OS and Datacenter Management for Microsoft Norway.
-I have been working in the IT industry for over 20 years, teaching and consulting mainly in Microsoft Servers and Technologies, Cloud Services and holding certifications as MCT and MCSE.
-My main focus areas are Enterprise Mobility + Security and Identity and Access Management with Azure AD. I also work a lot with Cloud and Datacenter Management, primarily with Operations Management Suite, Service Manager, Orchestrator, Operations Manager and Automation, in both Azure and Hybrid Cloud environments.
+My name is Jan Vidar Elven. I'm a Microsoft MVP (Most Valuable Professional) in Security focusing on Identity & Access since 2016. I work as a Senior Cloud & Platform Architect at Evidi AS ([www.evidi.com](https://www.evidi.com)) in Norway.
+
+I have been working in the IT industry for 30 years now, teaching, consulting and advising mainly in Microsoft Solutions and Technologies, Cloud Services and holding certifications such as MCT and MCSE, and a lot of Microsoft Certified Solutions Architect, Professional and Administrator certification areas.
+
+My main focus areas are Security, Identity and Access Management with Entra ID. I also work a lot with Cloud & Datacenter Management, DevOps, and AI Services, primarily with Microsoft Azure and Hybrid Cloud environments, Infrastructure as Code with Bicep & Terraform, Microsoft Graph and Automation, and many more of the recent developments and areas of Microsoft Cloud.
